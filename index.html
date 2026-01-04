@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyan Prakash Tiwari - Software Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Load theme before page renders to prevent flash
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+    </script>
+</head>
+<body>
+    <header>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙 dark</button>
+        <nav>
+            <a href="index.html">home</a> |
+            <a href="about.html">about</a> |
+            <a href="work.html">work</a> |
+            <a href="projects.html">projects</a> |
+            <a href="contact.html">contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <pre>
+Hi, Gyan here 👋
+
+Backend Engineer
+Location: India (IST / GMT+5:30)
+GitHub: <a href="https://github.com/gyancodes" target="_blank">https://github.com/gyancodes</a>
+LinkedIn: <a href="https://www.linkedin.com/in/gyancodes" target="_blank">https://linkedin.com/in/gyancodes</a>
+
+-----------------------------------
+
+I build software. Backend engineer focused on
+scalable systems, APIs, and databases.
+
+Currently learning system design, building 
+production-grade applications, and contributing 
+to open source.
+
+<b>Skills / Technologies:</b>
+- <b>Languages:</b> JavaScript (ES6+), TypeScript, Java, SQL
+- <b>Backend:</b> Node.js, Express.js, tRPC, REST APIs
+- <b>Frontend:</b> React.js, Next.js, Redux
+- <b>Database:</b> PostgreSQL, MongoDB
+- <b>Mobile:</b> React Native, Expo (learning)
+- <b>Cloud/DevOps:</b> AWS (EC2, S3, Lambda), Docker, CI/CD
+- <b>Tools:</b> Git, Postman, WebRTC
+
+-----------------------------------
+Quick Links:
+- View my projects → <a href="projects.html">projects</a>
+- Check work → <a href="work.html">work</a>
+- Read about me → <a href="about.html">about</a>
+- Get in touch → <a href="contact.html">contact</a>
+-----------------------------------</pre>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gyan Prakash Tiwari</p>
+    </footer>
+    <script src="theme.js"></script>
+</body>
+</html>
