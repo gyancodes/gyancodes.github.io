@@ -4,66 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gyan Prakash Tiwari - Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script>
-        // Load theme before page renders to prevent flash
-        const savedTheme = localStorage.getItem('theme');
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', theme);
-    </script>
 </head>
 <body>
     <header>
-        <button class="theme-toggle" onclick="toggleTheme()">🌙 dark</button>
         <nav>
             <a href="index.html">home</a> |
-            <a href="about.html">about</a> |
-            <a href="work.html">work</a> |
             <a href="projects.html">projects</a> |
-            <a href="contact.html">contact</a>
+            <a href="blog.html">blog</a>
         </nav>
     </header>
 
     <main>
-        <pre>
-Hi, Gyan here 👋
+        <!-- Header -->
+        <section class="section">
+            <h1>Gyan Prakash Tiwari</h1>
+            <p><strong>Software Engineer</strong> — Backend & Systems</p>
+            <p>India (IST) · <a href="https://github.com/gyancodes" target="_blank">GitHub</a> · <a href="https://www.linkedin.com/in/gyancodes" target="_blank">LinkedIn</a></p>
+        </section>
 
-Backend Engineer
-Location: India (IST / GMT+5:30)
-GitHub: <a href="https://github.com/gyancodes" target="_blank">https://github.com/gyancodes</a>
-LinkedIn: <a href="https://www.linkedin.com/in/gyancodes" target="_blank">https://linkedin.com/in/gyancodes</a>
+        <!-- About -->
+        <section class="section">
+            <h2>About</h2>
+            <p>
+                I engineer backend systems that scale. My work focuses on building 
+                reliable APIs, optimizing databases, and designing clean architectures.
+            </p>
+            <p>
+                CS Graduate '24 with hands-on experience shipping production systems. 
+                Built as founding engineer at early-stage startups — learned to solve 
+                real problems under constraints.
+            </p>
+        </section>
 
------------------------------------
+        <!-- Skills -->
+        <section class="section">
+            <h2>Skills</h2>
+            <p><strong>Backend:</strong> Node.js, TypeScript, Java, REST APIs, tRPC</p>
+            <p><strong>Databases:</strong> PostgreSQL, MongoDB, Query Optimization</p>
+            <p><strong>Infrastructure:</strong> Docker, AWS (EC2, S3, Lambda), CI/CD</p>
+            <p><strong>Frontend:</strong> React, Next.js</p>
+        </section>
 
-I build software. Backend engineer focused on
-scalable systems, APIs, and databases.
+        <!-- Work -->
+        <section class="section">
+            <h2>Work</h2>
+            <p>
+                <strong>Founding Engineer</strong> @ <a href="https://www.linkedin.com/company/nothinglabsai/" target="_blank">NothingLabsAI</a><br>
+                <span class="meta">Mar–Jun 2025 · AI-powered business assessment platform</span>
+            </p>
+            <p>
+                <strong>Founding Engineer</strong> @ Stealth Startup<br>
+                <span class="meta">2023–2025 · Community finance app with ROSCA model</span>
+            </p>
+            <p>
+                <strong>Founder</strong> @ <a href="https://www.linkedin.com/company/thinkscript/" target="_blank">ThinkScript</a><br>
+                <span class="meta">2023–2024 · University tech community, 200+ members</span>
+            </p>
+        </section>
 
-Currently learning system design, building 
-production-grade applications, and contributing 
-to open source.
-
-<b>Skills / Technologies:</b>
-- <b>Languages:</b> JavaScript (ES6+), TypeScript, Java, SQL
-- <b>Backend:</b> Node.js, Express.js, tRPC, REST APIs
-- <b>Frontend:</b> React.js, Next.js, Redux
-- <b>Database:</b> PostgreSQL, MongoDB
-- <b>Mobile:</b> React Native, Expo (learning)
-- <b>Cloud/DevOps:</b> AWS (EC2, S3, Lambda), Docker, CI/CD
-- <b>Tools:</b> Git, Postman, WebRTC
-
------------------------------------
-Quick Links:
-- View my projects → <a href="projects.html">projects</a>
-- Check work → <a href="work.html">work</a>
-- Read about me → <a href="about.html">about</a>
-- Get in touch → <a href="contact.html">contact</a>
------------------------------------</pre>
+        <!-- Links -->
+        <section class="section">
+            <p>→ <a href="projects.html">projects</a> · → <a href="blog.html">blog</a></p>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Gyan Prakash Tiwari</p>
     </footer>
-    <script src="theme.js"></script>
 </body>
 </html>

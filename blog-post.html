@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="post-title">Blog Post - Gyan Prakash Tiwari</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">home</a> |
+            <a href="projects.html">projects</a> |
+            <a href="blog.html">blog</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="blog-back">
+            <a href="blog.html">← back to blog</a>
+        </div>
+        
+        <div id="blog-post-content">
+            <!-- Blog post content will be dynamically loaded here -->
+        </div>
+
+        <hr>
+
+        <div id="blog-navigation" class="blog-nav">
+            <!-- Previous/Next navigation will be dynamically loaded here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gyan Prakash Tiwari</p>
+    </footer>
+    <script src="blog.js"></script>
+    <script>
+        renderBlogPost();
+    </script>
+</body>
+</html>
