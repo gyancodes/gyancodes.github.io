@@ -1,339 +1,352 @@
 /* Dark Mode Only Portfolio */
 :root {
-    --bg-color: #0d0d0d;
-    --text-color: #e0e0e0;
-    --link-color: #6ca0ff;
-    --border-color: #2a2a2a;
-    --footer-color: #888;
-    --accent-color: #4a9eff;
-    --card-bg: #151515;
+  --bg-color: #0d0d0d;
+  --text-color: #e0e0e0;
+  --link-color: #6ca0ff;
+  --border-color: #2a2a2a;
+  --footer-color: #888;
+  --accent-color: #4a9eff;
+  --card-bg: #151515;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.7;
-    padding: 20px 30px;
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 15px;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.7;
+  padding: 20px 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 15px;
 }
 
 header {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 nav {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 nav a {
-    color: var(--link-color);
-    text-decoration: none;
+  color: var(--link-color);
+  text-decoration: none;
 }
 
 nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 main {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 pre {
-    white-space: pre-wrap;
-    font-family: inherit;
-    font-size: 15px;
-    line-height: 1.8;
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.8;
 }
 
-h1, h2, h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
+h1,
+h2,
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 ul {
-    margin-left: 20px;
-    margin-bottom: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
 a {
-    color: var(--link-color);
-    text-decoration: none;
+  color: var(--link-color);
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border-color);
-    font-size: 12px;
-    color: var(--footer-color);
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+  font-size: 12px;
+  color: var(--footer-color);
 }
 
 hr {
-    border: none;
-    border-top: 1px solid var(--border-color);
-    margin: 15px 0;
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 15px 0;
 }
 
 /* Section dividers */
 .section {
-    margin-bottom: 25px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--border-color);
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .section:last-of-type {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .meta {
-    color: var(--footer-color);
-    font-size: 14px;
+  color: var(--footer-color);
+  font-size: 14px;
+}
+
+.tech-tag {
+  color: #fbbf24;
+  font-weight: 500;
+}
+
+.role-highlight {
+  color: #22d3ee;
+  font-weight: 600;
 }
 
 /* Work section styles */
 .work-section {
-    margin-bottom: 35px;
-    padding-bottom: 25px;
-    border-bottom: 1px solid var(--border-color);
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .work-section:last-of-type {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .work-header {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .work-header h3 {
-    margin: 0 0 6px 0;
-    font-size: 16px;
+  margin: 0 0 6px 0;
+  font-size: 16px;
 }
 
 .work-role {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 .company-link {
-    color: var(--link-color);
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 1px dotted var(--link-color);
+  color: var(--link-color);
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--link-color);
 }
 
 .company-link:hover {
-    color: var(--link-color);
-    border-bottom: 1px solid var(--link-color);
+  color: var(--link-color);
+  border-bottom: 1px solid var(--link-color);
 }
 
 .company-name {
-    font-weight: bold;
-    color: var(--text-color);
+  font-weight: bold;
+  color: var(--text-color);
 }
 
 .work-meta {
-    margin: 0 0 10px 0;
-    color: var(--footer-color);
-    font-size: 13px;
+  margin: 0 0 10px 0;
+  color: var(--footer-color);
+  font-size: 13px;
 }
 
 .work-description {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .work-highlights {
-    margin-left: 20px;
-    margin-bottom: 0;
+  margin-left: 20px;
+  margin-bottom: 0;
 }
 
 .opensource-section {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .opensource-section h3 {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .pr-status {
-    color: var(--footer-color);
+  color: var(--footer-color);
 }
 
 /* Projects section styles */
 .projects-intro {
-    margin-bottom: 25px;
-    color: var(--footer-color);
+  margin-bottom: 25px;
+  color: var(--footer-color);
 }
 
 .project-section {
-    margin-bottom: 35px;
-    padding-bottom: 25px;
-    border-bottom: 1px solid var(--border-color);
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .project-section:last-of-type {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .project-header h3 {
-    margin: 0 0 12px 0;
-    font-size: 16px;
+  margin: 0 0 12px 0;
+  font-size: 16px;
 }
 
 .project-link {
-    color: var(--link-color);
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 1px dotted var(--link-color);
+  color: var(--link-color);
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--link-color);
 }
 
 .project-link:hover {
-    color: var(--link-color);
-    border-bottom: 1px solid var(--link-color);
+  color: var(--link-color);
+  border-bottom: 1px solid var(--link-color);
 }
 
 .project-description {
-    margin-bottom: 12px;
-    line-height: 1.65;
+  margin-bottom: 12px;
+  line-height: 1.65;
 }
 
 .project-tech {
-    margin: 0;
-    font-size: 13px;
-    color: var(--footer-color);
+  margin: 0;
+  font-size: 13px;
+  color: var(--footer-color);
 }
 
 .project-tech b {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 .github-cta {
-    margin-top: 30px;
-    font-size: 13px;
-    color: var(--footer-color);
+  margin-top: 30px;
+  font-size: 13px;
+  color: var(--footer-color);
 }
 
 /* Blog section styles */
 .blog-intro {
-    margin-bottom: 20px;
-    color: var(--footer-color);
+  margin-bottom: 20px;
+  color: var(--footer-color);
 }
 
 .tag-filter {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .blog-list {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .blog-item {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .blog-item h3 {
-    margin: 0 0 8px 0;
-    font-size: 16px;
+  margin: 0 0 8px 0;
+  font-size: 16px;
 }
 
 .blog-title-link {
-    color: var(--link-color);
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 1px dotted var(--link-color);
+  color: var(--link-color);
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--link-color);
 }
 
 .blog-title-link:hover {
-    border-bottom: 1px solid var(--link-color);
+  border-bottom: 1px solid var(--link-color);
 }
 
 .blog-meta {
-    margin: 8px 0;
-    color: var(--footer-color);
-    font-size: 13px;
+  margin: 8px 0;
+  color: var(--footer-color);
+  font-size: 13px;
 }
 
 .blog-description {
-    margin: 10px 0;
-    line-height: 1.65;
+  margin: 10px 0;
+  line-height: 1.65;
 }
 
 .blog-back {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .blog-back a {
-    color: var(--link-color);
-    text-decoration: none;
+  color: var(--link-color);
+  text-decoration: none;
 }
 
 .blog-back a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 #blog-post-content h2 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 20px;
 }
 
 #blog-post-content h3 {
-    margin-top: 25px;
-    margin-bottom: 12px;
-    font-size: 16px;
+  margin-top: 25px;
+  margin-bottom: 12px;
+  font-size: 16px;
 }
 
 #blog-post-content p {
-    margin-bottom: 15px;
-    line-height: 1.7;
+  margin-bottom: 15px;
+  line-height: 1.7;
 }
 
 #blog-post-content ul {
-    margin-bottom: 15px;
-    margin-left: 25px;
+  margin-bottom: 15px;
+  margin-left: 25px;
 }
 
 #blog-post-content ul li {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 #blog-post-content pre {
-    background-color: var(--card-bg);
-    padding: 15px;
-    margin: 15px 0;
-    overflow-x: auto;
-    border-radius: 3px;
+  background-color: var(--card-bg);
+  padding: 15px;
+  margin: 15px 0;
+  overflow-x: auto;
+  border-radius: 3px;
 }
 
 .blog-nav {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .blog-nav p {
-    margin: 0;
+  margin: 0;
 }
 
 .blog-nav a {
-    color: var(--link-color);
-    text-decoration: none;
+  color: var(--link-color);
+  text-decoration: none;
 }
 
 .blog-nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
