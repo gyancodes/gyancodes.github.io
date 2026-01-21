@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,129 +9,109 @@
   <body>
     <header>
       <nav>
-        <a href="index.html">home</a> | <a href="projects.html">projects</a>
+        <a href="index.html">home</a>
+        <a href="experience.html">experience</a>
+        <a href="projects.html">projects</a>
       </nav>
     </header>
 
     <main>
-      <h1>PROJECTS</h1>
-      <p class="projects-intro">
-        Selected work. More on
-        <a href="https://github.com/gyancodes" target="_blank">GitHub</a>.
-      </p>
+      <h1>Projects</h1>
 
-      <div class="project-section">
-        <div class="project-header">
-          <h3>
+      <section class="section">
+        <div class="item">
+          <div class="item-header">
             <a
               href="https://github.com/gyancodes/silentx"
               target="_blank"
-              class="project-link"
+              class="item-title"
               >SilentX</a
             >
-          </h3>
+          </div>
+          <p class="item-description">
+            Privacy-first messaging app. End-to-end encryption using NaCl.
+            Anonymous identities.
+          </p>
+          <div class="item-tech">
+            React Native, Expo SDK 52, NaCl, AsyncStorage
+          </div>
         </div>
-        <p class="project-description">
-          Privacy-first messaging app. End-to-end encryption using NaCl.
-          Anonymous identities. No personal data collection.
-        </p>
-        <p class="project-tech">
-          <b>Tech:</b> React Native, Expo SDK 52, NaCl Encryption, AsyncStorage
-        </p>
-      </div>
 
-      <div class="project-section">
-        <div class="project-header">
-          <h3>
+        <div class="item">
+          <div class="item-header">
             <a
               href="https://github.com/gyancodes/convertflow"
               target="_blank"
-              class="project-link"
+              class="item-title"
               >ConvertFlow</a
             >
-          </h3>
+          </div>
+          <p class="item-description">
+            File conversion tool. Multiple format support. Client-side
+            processing for privacy.
+          </p>
+          <div class="item-tech">React, TypeScript, Node.js</div>
         </div>
-        <p class="project-description">
-          File conversion tool. Multiple format support. Client-side processing
-          for privacy.
-        </p>
-        <p class="project-tech">
-          <b>Tech:</b> React, TypeScript, Node.js, File Processing APIs
-        </p>
-      </div>
 
-      <div class="project-section">
-        <div class="project-header">
-          <h3>
+        <div class="item">
+          <div class="item-header">
             <a
               href="https://github.com/gyancodes/micro-feed"
               target="_blank"
-              class="project-link"
+              class="item-title"
               >Micro Feed</a
             >
-          </h3>
+          </div>
+          <p class="item-description">
+            Lightweight social feed with real-time updates via WebSocket.
+          </p>
+          <div class="item-tech">Next.js, WebSocket, PostgreSQL, Supabase</div>
         </div>
-        <p class="project-description">
-          Lightweight social feed. Real-time updates via WebSocket. User auth
-          and profiles.
-        </p>
-        <p class="project-tech">
-          <b>Tech:</b> Next.js, WebSocket, PostgreSQL, Supabase
-        </p>
-      </div>
 
-      <div class="project-section">
-        <div class="project-header">
-          <h3>
+        <div class="item">
+          <div class="item-header">
             <a
               href="https://github.com/gyancodes/syncbeats"
               target="_blank"
-              class="project-link"
+              class="item-title"
               >SyncBeats</a
             >
-          </h3>
+          </div>
+          <p class="item-description">
+            Collaborative music listening. Multiple users sync playback in
+            real-time.
+          </p>
+          <div class="item-tech">React, Node.js, Socket.io</div>
         </div>
-        <p class="project-description">
-          Collaborative music listening. Multiple users sync playback in
-          real-time. Room-based sessions.
-        </p>
-        <p class="project-tech">
-          <b>Tech:</b> React, Node.js, WebSocket, Socket.io
-        </p>
-      </div>
 
-      <div class="project-section">
-        <div class="project-header">
-          <h3>
+        <div class="item">
+          <div class="item-header">
             <a
               href="https://github.com/gyancodes/thoughtbox"
               target="_blank"
-              class="project-link"
+              class="item-title"
               >ThoughtBox</a
             >
-          </h3>
+          </div>
+          <p class="item-description">
+            Private journaling app. Markdown support. Local-first storage.
+          </p>
+          <div class="item-tech">React, TypeScript, Local Storage</div>
         </div>
-        <p class="project-description">
-          Private journaling app. Markdown support. Tag-based organization.
-          Local-first storage.
-        </p>
-        <p class="project-tech">
-          <b>Tech:</b> React, TypeScript, Local Storage, Markdown Parser
-        </p>
-      </div>
+      </section>
 
-      <hr />
-
-      <p class="github-cta">
-        More projects available at
-        <a href="https://github.com/gyancodes" target="_blank"
-          >github.com/gyancodes</a
-        >
-      </p>
+      <section class="section">
+        <p>
+          More on
+          <a href="https://github.com/gyancodes" target="_blank"
+            >github.com/gyancodes</a
+          >
+        </p>
+      </section>
     </main>
 
     <footer>
-      <p>&copy; 2026 Gyan Prakash Tiwari</p>
+      <p>© 2026 Gyan Prakash Tiwari</p>
     </footer>
   </body>
 </html>
