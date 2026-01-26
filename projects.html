@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects - Gyan Prakash Tiwari</title>
+    <!-- Prevent flash of wrong theme -->
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        const theme = savedTheme || (prefersDark ? "dark" : "light");
+        if (theme === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -19,85 +32,120 @@
       <h1>Projects</h1>
 
       <section class="section">
-        <div class="item">
-          <div class="item-header">
-            <a
-              href="https://github.com/gyancodes/silentx"
-              target="_blank"
-              class="item-title"
-              >SilentX</a
-            >
-          </div>
-          <p class="item-description">
-            Privacy-first messaging app. End-to-end encryption using NaCl.
-            Anonymous identities.
-          </p>
-          <div class="item-tech">
-            React Native, Expo SDK 52, NaCl, AsyncStorage
-          </div>
-        </div>
+        <section class="section">
+          <div class="projects-grid">
+            <!-- SilentX -->
+            <div class="project-card">
+              <img
+                src="project-placeholder.png"
+                alt="SilentX App Interface"
+                class="project-image"
+              />
+              <div class="project-content">
+                <a
+                  href="https://github.com/gyancodes/silentx"
+                  target="_blank"
+                  class="project-title"
+                  >SilentX</a
+                >
+                <p class="project-desc">
+                  Privacy-first messaging app with end-to-end NaCl encryption
+                  and anonymous identities.
+                </p>
+                <div class="project-tech">React Native · Expo · NaCl</div>
+              </div>
+            </div>
 
-        <div class="item">
-          <div class="item-header">
-            <a
-              href="https://github.com/gyancodes/convertflow"
-              target="_blank"
-              class="item-title"
-              >ConvertFlow</a
-            >
-          </div>
-          <p class="item-description">
-            File conversion tool. Multiple format support. Client-side
-            processing for privacy.
-          </p>
-          <div class="item-tech">React, TypeScript, Node.js</div>
-        </div>
+            <!-- ConvertFlow -->
+            <div class="project-card">
+              <img
+                src="project-placeholder.png"
+                alt="ConvertFlow Interface"
+                class="project-image"
+              />
+              <div class="project-content">
+                <a
+                  href="https://github.com/gyancodes/convertflow"
+                  target="_blank"
+                  class="project-title"
+                  >ConvertFlow</a
+                >
+                <p class="project-desc">
+                  Secure file conversion tool with client-side processing for
+                  maximum privacy.
+                </p>
+                <div class="project-tech">React · TypeScript · Node.js</div>
+              </div>
+            </div>
 
-        <div class="item">
-          <div class="item-header">
-            <a
-              href="https://github.com/gyancodes/micro-feed"
-              target="_blank"
-              class="item-title"
-              >Micro Feed</a
-            >
-          </div>
-          <p class="item-description">
-            Lightweight social feed with real-time updates via WebSocket.
-          </p>
-          <div class="item-tech">Next.js, WebSocket, PostgreSQL, Supabase</div>
-        </div>
+            <!-- Micro Feed -->
+            <div class="project-card">
+              <img
+                src="project-placeholder.png"
+                alt="Micro Feed Interface"
+                class="project-image"
+              />
+              <div class="project-content">
+                <a
+                  href="https://github.com/gyancodes/micro-feed"
+                  target="_blank"
+                  class="project-title"
+                  >Micro Feed</a
+                >
+                <p class="project-desc">
+                  Lightweight social feed with real-time updates via WebSocket.
+                </p>
+                <div class="project-tech">Next.js · WebSocket · Supabase</div>
+              </div>
+            </div>
 
-        <div class="item">
-          <div class="item-header">
-            <a
-              href="https://github.com/gyancodes/syncbeats"
-              target="_blank"
-              class="item-title"
-              >SyncBeats</a
-            >
-          </div>
-          <p class="item-description">
-            Collaborative music listening. Multiple users sync playback in
-            real-time.
-          </p>
-          <div class="item-tech">React, Node.js, Socket.io</div>
-        </div>
+            <!-- SyncBeats -->
+            <div class="project-card">
+              <img
+                src="project-placeholder.png"
+                alt="SyncBeats Interface"
+                class="project-image"
+              />
+              <div class="project-content">
+                <a
+                  href="https://github.com/gyancodes/syncbeats"
+                  target="_blank"
+                  class="project-title"
+                  >SyncBeats</a
+                >
+                <p class="project-desc">
+                  Collaborative music platform where multiple users sync
+                  playback in real-time.
+                </p>
+                <div class="project-tech">React · Node.js · Socket.io</div>
+              </div>
+            </div>
 
-        <div class="item">
-          <div class="item-header">
-            <a
-              href="https://github.com/gyancodes/thoughtbox"
-              target="_blank"
-              class="item-title"
-              >ThoughtBox</a
-            >
+            <!-- ThoughtBox -->
+            <div class="project-card">
+              <img
+                src="project-placeholder.png"
+                alt="ThoughtBox Interface"
+                class="project-image"
+              />
+              <div class="project-content">
+                <a
+                  href="https://github.com/gyancodes/thoughtbox"
+                  target="_blank"
+                  class="project-title"
+                  >ThoughtBox</a
+                >
+                <p class="project-desc">
+                  Private journaling app with Markdown support and local-first
+                  storage.
+                </p>
+                <div class="project-tech">
+                  React · TypeScript · LocalStorage
+                </div>
+              </div>
+            </div>
           </div>
-          <p class="item-description">
-            Private journaling app. Markdown support. Local-first storage.
-          </p>
-          <div class="item-tech">React, TypeScript, Local Storage</div>
-        </div>
+        </section>
       </section>
 
       <section class="section">
@@ -113,5 +161,119 @@
     <footer>
       <p>© 2026 Gyan Prakash Tiwari</p>
     </footer>
+
+    <!-- Floating Bottom Menu -->
+    <div class="floating-menu">
+      <a href="index.html" class="menu-item" title="Home">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+      <a href="experience.html" class="menu-item" title="Experience">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+        </svg>
+      </a>
+      <a href="projects.html" class="menu-item active" title="Projects">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+          ></path>
+        </svg>
+      </a>
+      <div class="menu-divider"></div>
+      <button
+        class="menu-item theme-toggle"
+        onclick="toggleTheme()"
+        title="Toggle Theme"
+      >
+        <svg
+          class="sun-icon"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg
+          class="moon-icon"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+
+    <script>
+      // Theme toggle functionality
+      function toggleTheme() {
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        html.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+      }
+
+      // Load saved theme on page load
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        const theme = savedTheme || (prefersDark ? "dark" : "light");
+        if (theme === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
   </body>
 </html>
