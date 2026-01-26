@@ -18,9 +18,9 @@
   --menu-border: rgba(0, 0, 0, 0.1);
   --menu-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
   --card-bg: #ffffff;
-  --card-border: transparent;
+  --card-border: #e0e0e0;
   --card-hover-bg: #f8f9fa;
-  --card-hover-border: #e9ecef;
+  --card-hover-border: #d0d0d0;
 }
 
 [data-theme="dark"] {
@@ -360,12 +360,26 @@ hr {
   font-size: 16px;
   color: var(--text-primary);
   margin-bottom: 8px;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   text-decoration: none;
 }
 
 .project-title:hover {
   color: var(--accent-color);
+}
+
+.external-link-icon {
+  opacity: 0.5;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.project-title:hover .external-link-icon {
+  opacity: 1;
+  transform: translate(2px, -2px);
 }
 
 .project-desc {
