@@ -1,234 +1,243 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gyan Prakash Tiwari</title>
-    <!-- Prevent flash of wrong theme -->
-    <script>
-      (function () {
-        const savedTheme = localStorage.getItem("theme");
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)",
-        ).matches;
-        const theme = savedTheme || (prefersDark ? "dark" : "light");
-        if (theme === "dark") {
-          document.documentElement.setAttribute("data-theme", "dark");
-        }
-      })();
-    </script>
-    <link rel="stylesheet" href="./style.css?v=2602" />
-    <script
-      defer
-      src="https://cloud.umami.is/script.js"
-      data-website-id="96cefffa-56fd-49d0-86ee-25f57fea8016"
-    ></script>
-    <script
-    src="https://cdn.databuddy.cc/databuddy.js"
-    data-client-id="45d07c8e-5a93-4705-9b4f-b11c80bd17f4"
-    data-track-hash-changes="true"
-    data-track-attributes="true"
-    data-track-outgoing-links="true"
-    data-track-interactions="true"
-    data-track-web-vitals="true"
-    data-track-errors="true"
-    crossorigin="anonymous"
-    async
-  ></script>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="index.html">home</a>
-        <a href="work.html">work</a>
-        <a href="projects.html">projects</a>
-      </nav>
-    </header>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gyan Prakash Tiwari</title>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f7f7f7;
+    --ink: #111111;
+    --muted: #555555;
+    --line: #d7d7d7;
+    --accent: #0044aa;
+  }
 
-    <main>
-      <section class="section">
-        <h1>Hey, I'm Gyan 👋</h1>
-      </section>
+  * {
+    box-sizing: border-box;
+  }
 
-      <section class="section">
-        <p class="about-text">
-          I work on backend systems, infrastructure, and applied AI. I design
-          and build reliable, scalable systems and have shipped production-grade
-          features in early-stage startups. Previously founded ThinkScript, a
-          tech community. I care deeply about building secure, resilient systems
-          that scale.
-          <br /><br />
-          I sleep sometimes, and I generally don't drink coffee.
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 12.5px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  main {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    padding: 32px 16px;
+  }
+
+  .page {
+    padding: 0;
+  }
+
+  header {
+    display: grid;
+    gap: 10px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 1.55rem;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-weight: 700;
+  }
+
+  .rule {
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .intro {
+    max-width: 72ch;
+    color: var(--muted);
+  }
+
+  section {
+    display: grid;
+    gap: 10px;
+    padding-top: 18px;
+  }
+
+  h2 {
+    color: var(--ink);
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  .role {
+    display: grid;
+    gap: 4px;
+  }
+
+  .role-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 10px;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  .meta {
+    color: var(--muted);
+    font-size: 0.84rem;
+  }
+
+  .projects {
+    display: grid;
+    gap: 4px;
+  }
+
+  .project {
+    display: grid;
+    grid-template-columns: 118px 1fr;
+    gap: 8px;
+    align-items: baseline;
+  }
+
+  .project-name {
+    font-weight: 700;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+  }
+
+  a:hover,
+  a:focus-visible {
+    text-decoration: underline;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 10px;
+  }
+
+  .tag {
+    color: var(--muted);
+    font-size: 0.86rem;
+    white-space: nowrap;
+  }
+
+  .tag::before {
+    content: "#";
+    color: var(--accent);
+  }
+
+  @media (max-width: 560px) {
+    main {
+      padding: 20px 14px;
+    }
+
+    .project {
+      grid-template-columns: 1fr;
+      gap: 1px;
+    }
+  }
+</style>
+</head>
+<body>
+  <main>
+    <article class="page">
+      <header>
+        <h1>Hi, I'm Gyan</h1>
+        <div class="rule" aria-hidden="true"></div>
+  
+        <p class="intro">
+          I graduated in 2024 and spent the last two years building products on my own. Many of them did not work out, but the experience taught me a lot about programming, problem-solving, and building products.
         </p>
-      </section>
+        <p class="intro">
+          Now I want to join an engineering team, work on real products with actual users, and scale. I am starting from zero again and ready to build something useful.
+        </p>
+      </header>
 
-      <section class="section social-links" aria-label="Social links">
-        <!-- <a href="https://x.com/gyancodes" target="_blank" rel="noopener noreferrer">
-          <span class="social-arrow" aria-hidden="true">&#8599;</span>twitter
-        </a> -->
-        <a
-          href="https://github.com/gyancodes"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="social-arrow" aria-hidden="true">&#8599;</span>github
-        </a>
-        <a
-          href="https://linkedin.com/in/gyancodes"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="social-arrow" aria-hidden="true">&#8599;</span>linkedin
-        </a>
-        <!-- <a href="mailto:hello@gyancodes.dev">
-          <span class="social-arrow" aria-hidden="true">&#8599;</span>email
-        </a> -->
-      </section>
-
-      <section class="section">
-        <h2>Built With (So Far)</h2>
-        <div class="skills-grid">
-          <span class="skill-pill">JavaScript</span>
-          <span class="skill-pill">TypeScript</span>
-          <span class="skill-pill">Java</span>
-          <span class="skill-pill">SQL</span>
-          <span class="skill-pill">PostgreSQL</span>
-          <span class="skill-pill">MongoDB</span>
-          <span class="skill-pill">Node.js</span>
-          <span class="skill-pill">Express.js</span>
-          <span class="skill-pill">React.js</span>
-          <span class="skill-pill">Next.js</span>
-          <span class="skill-pill">tRPC</span>
-          <span class="skill-pill">Redux</span>
-          <span class="skill-pill">WebRTC</span>
-          <span class="skill-pill">OpenAI / GPT</span>
-          <span class="skill-pill">LangChain</span>
-          <span class="skill-pill">AWS</span>
-          <span class="skill-pill">Docker</span>
-          <span class="skill-pill">REST APIs</span>
-          <span class="skill-pill">Git</span>
-          <span class="skill-pill">CI/CD</span>
-          <span class="skill-pill">Postman</span>
+      <section aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Experience</h2>
+        <div class="role">
+          <div class="role-title">
+            <h3>Founder @ ThinkScript</h3>
+            <span class="meta">Jan 2023 - Present | Remote</span>
+          </div>
+          <p class="intro">University tech community with 200+ members; organized workshops, mentorship sessions, and collaborative coding events.</p>
         </div>
       </section>
-    </main>
 
-    <footer>
-      <p>© 2026 Gyan Prakash Tiwari</p>
-    </footer>
+      <section aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+        <div class="projects">
+          <div class="project">
+            <span class="project-name">SilentX</span>
+            <a href="https://github.com/gyancodes/silentx">github.com/gyancodes/silentx</a>
+          </div>
+          <div class="project">
+            <span class="project-name">ConvertFlow</span>
+            <a href="https://github.com/gyancodes/convertflow">github.com/gyancodes/convertflow</a>
+          </div>
+          <div class="project">
+            <span class="project-name">Micro Feed</span>
+            <a href="https://github.com/gyancodes/micro-feed">github.com/gyancodes/micro-feed</a>
+          </div>
+          <div class="project">
+            <span class="project-name">SyncBeats</span>
+            <a href="https://github.com/gyancodes/syncbeats">github.com/gyancodes/syncbeats</a>
+          </div>
+          <div class="project">
+            <span class="project-name">ThoughtBox</span>
+            <a href="https://github.com/gyancodes/thoughtbox">github.com/gyancodes/thoughtbox</a>
+          </div>
+        </div>
+      </section>
 
-    <!-- Floating Bottom Menu -->
-    <div class="floating-menu">
-      <a href="index.html" class="menu-item active" title="Home">
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-          <polyline points="9 22 9 12 15 12 15 22"></polyline>
-        </svg>
-      </a>
-      <a href="work.html" class="menu-item" title="Work">
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-        </svg>
-      </a>
-      <a href="projects.html" class="menu-item" title="Projects">
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path
-            d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
-          ></path>
-        </svg>
-      </a>
-      <div class="menu-divider"></div>
-      <button
-        class="menu-item theme-toggle"
-        onclick="toggleTheme()"
-        title="Toggle Theme"
-      >
-        <svg
-          class="sun-icon"
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-        <svg
-          class="moon-icon"
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-      </button>
-    </div>
-
-    <script>
-      // Theme toggle functionality
-      function toggleTheme() {
-        const html = document.documentElement;
-        const currentTheme = html.getAttribute("data-theme");
-        const newTheme = currentTheme === "dark" ? "light" : "dark";
-        html.setAttribute("data-theme", newTheme);
-        localStorage.setItem("theme", newTheme);
-      }
-
-      // Load saved theme on page load
-      (function () {
-        const savedTheme = localStorage.getItem("theme");
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)",
-        ).matches;
-        const theme = savedTheme || (prefersDark ? "dark" : "light");
-        if (theme === "dark") {
-          document.documentElement.setAttribute("data-theme", "dark");
-        }
-      })();
-    </script>
-  </body>
+      <section aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+        <div class="tags">
+          <span class="tag">TypeScript</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Express.js</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Prisma</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">Java</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Docker</span>
+          <span class="tag">AWS</span>
+          <span class="tag">Git</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Postman</span>
+        </div>
+      </section>
+    </article>
+  </main>
+</body>
 </html>
