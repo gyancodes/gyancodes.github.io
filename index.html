@@ -5,249 +5,250 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gyan Prakash Tiwari</title>
 <style>
-  :root {
-    color-scheme: light;
-    --bg: #f7f7f7;
-    --ink: #111111;
-    --muted: #555555;
-    --line: #d7d7d7;
-    --accent: #0044aa;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
   body {
-    margin: 0;
-    min-height: 100vh;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-    font-size: 12.5px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+    max-width: 680px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #24292f;
+    background-color: #ffffff;
   }
 
-  main {
-    width: min(100%, 760px);
-    margin: 0 auto;
-    padding: 32px 16px;
+  a {
+    color: #0969da;
+    text-decoration: none;
   }
 
-  .page {
-    padding: 0;
+  a:hover {
+    text-decoration: underline;
   }
 
   header {
-    display: grid;
-    gap: 10px;
-    padding-bottom: 18px;
-    border-bottom: 1px solid var(--line);
-  }
-
-  h1,
-  h2,
-  h3,
-  p {
-    margin: 0;
+    margin-bottom: 32px;
   }
 
   h1 {
-    font-size: 1.55rem;
-    line-height: 1.2;
-    letter-spacing: 0;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
   }
 
-  .rule {
-    color: var(--muted);
-    white-space: nowrap;
-    overflow: hidden;
+  .links {
+    font-size: 13px;
   }
 
-  .intro {
-    max-width: 72ch;
-    color: var(--muted);
-  }
-
-  .social-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 14px;
+  .links a {
+    margin-right: 12px;
   }
 
   section {
-    display: grid;
-    gap: 10px;
-    padding-top: 18px;
+    margin-bottom: 32px;
   }
 
   h2 {
-    color: var(--ink);
-    font-size: 0.92rem;
-    font-weight: 700;
-    letter-spacing: 0;
-    text-transform: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #d0d7de;
+    padding-bottom: 4px;
+    margin-bottom: 16px;
+  }
+
+  .exp-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .company-logo {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid #eef0f2;
+    background: #f8f9fa;
+    flex-shrink: 0;
+  }
+
+  .exp-content {
+    flex: 1;
+  }
+
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+
+  .company-name {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .exp-duration {
+    font-size: 13px;
+    color: #57606a;
+  }
+
+  .exp-location {
+    font-size: 12px;
+    color: #57606a;
+    margin-bottom: 12px;
   }
 
   .role {
-    display: grid;
-    gap: 4px;
+    margin-top: 8px;
+    padding-left: 12px;
+    border-left: 2px solid #f0f0f0;
   }
 
   .role-title {
     display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 6px 10px;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 13.5px;
   }
 
-  h3 {
-    font-size: 0.9rem;
-    font-weight: 700;
+  .role-date {
+    font-weight: normal;
+    font-size: 12px;
+    color: #57606a;
   }
 
-  .meta {
-    color: var(--muted);
-    font-size: 0.84rem;
+  .role-desc {
+    font-size: 13px;
+    margin-top: 4px;
   }
 
-  .projects {
-    display: grid;
-    gap: 4px;
+  .projects-list {
+    list-style: none;
+    padding: 0;
   }
 
-  .project {
-    display: grid;
-    grid-template-columns: 118px 1fr;
-    gap: 8px;
-    align-items: baseline;
+  .projects-list li {
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
   }
 
   .project-name {
-    font-weight: 700;
+    font-weight: 500;
   }
 
-  a {
-    color: var(--accent);
-    text-decoration: none;
-    text-underline-offset: 3px;
-    overflow-wrap: anywhere;
-  }
-
-  a:hover,
-  a:focus-visible {
-    text-decoration: underline;
-  }
-
-  .tags {
+  .skills-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 0 10px;
+    gap: 8px 16px;
+    font-size: 13px;
   }
 
-  .tag {
-    color: var(--muted);
-    font-size: 0.86rem;
-    white-space: nowrap;
-  }
-
-  .tag::before {
-    content: "#";
-    color: var(--accent);
-  }
-
-  @media (max-width: 560px) {
-    main {
-      padding: 20px 14px;
+  @media (max-width: 600px) {
+    body { margin-top: 20px; }
+    .exp-header, .role-title, .projects-list li {
+      flex-direction: column;
     }
-
-    .project {
-      grid-template-columns: 1fr;
-      gap: 1px;
-    }
+    .role-date { margin-top: 2px; }
   }
 </style>
 </head>
 <body>
-  <main>
-    <article class="page">
-      <header>
-        <h1>Hi, I'm Gyan</h1>
-        <div class="rule" aria-hidden="true"></div>
-  
-        <p class="intro">
-          I graduated in 2024 and spent the last two years building products on my own. Many of them did not work out, but the experience taught me a lot about programming, problem-solving, and building products.
-        </p>
-        <p class="intro">
-          Now I want to join an engineering team, work on real products with actual users, and scale. I am starting from zero again and ready to build something useful.
-        </p>
-        <nav class="social-links" aria-label="Social links">
-          <a href="https://github.com/gyancodes" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/gyancodes/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </nav>
-      </header>
+  <header>
+    <h1>Gyan Prakash Tiwari</h1>
+    <div class="links">
+      <a href="https://github.com/gyancodes">GitHub</a>
+      <a href="https://linkedin.com/in/gyancodes">LinkedIn</a>
+      <!-- <a href="mailto:gyanprakash.tiwari@outlook.com">Email</a> -->
+    </div>
+  </header>
 
-      <section aria-labelledby="experience-heading">
-        <h2 id="experience-heading">Experience</h2>
+  <section id="about">
+    <p>
+    Engineer and product builder. For the past two years, I've focused on independent product development, building full-stack applications from zero to scale. I am particularly interested in and currently working on backend systems, infrastructure, AI, and security.
+    </p>
+  </section>
+
+  <section>
+    <h2>Work</h2>
+    
+    <div class="exp-item">
+      <img src="https://res.cloudinary.com/da7rmnbiy/image/upload/v1778912058/ds_tp2lkc.png" class="company-logo" alt="Dhansamuh Logo">
+      <div class="exp-content">
+        <div class="exp-header">
+          <span class="company-name">Dhansamuh</span>
+          <span class="exp-duration">1 yr 5 mos</span>
+        </div>
+        <div class="exp-location">Hyderabad, India · Hybrid</div>
+        
         <div class="role">
           <div class="role-title">
-            <h3>Founder @ ThinkScript</h3>
-            <span class="meta">Jan 2023 - Present | Remote</span>
+            <span>Co-Founder (Full-time)</span>
+            <span class="role-date">Apr 2024 &ndash; Mar 2025</span>
           </div>
-          <p class="intro">University tech community with 200+ members; organized workshops, mentorship sessions, and collaborative coding events.</p>
+          <div class="role-desc">Building a secure digital platform modernizing traditional committee systems with bank-level security and KYC verification.</div>
         </div>
-      </section>
+        
+        <div class="role">
+          <div class="role-title">
+            <span>Founding Engineer (Part-time)</span>
+            <span class="role-date">Nov 2023 &ndash; Apr 2024</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      <section aria-labelledby="projects-heading">
-        <h2 id="projects-heading">Projects</h2>
-        <div class="projects">
-          <div class="project">
-            <span class="project-name">SilentX</span>
-            <a href="https://github.com/gyancodes/silentx">github.com/gyancodes/silentx</a>
-          </div>
-          <div class="project">
-            <span class="project-name">ConvertFlow</span>
-            <a href="https://github.com/gyancodes/convertflow">github.com/gyancodes/convertflow</a>
-          </div>
-          <div class="project">
-            <span class="project-name">Micro Feed</span>
-            <a href="https://github.com/gyancodes/micro-feed">github.com/gyancodes/micro-feed</a>
-          </div>
-          <div class="project">
-            <span class="project-name">SyncBeats</span>
-            <a href="https://github.com/gyancodes/syncbeats">github.com/gyancodes/syncbeats</a>
-          </div>
-          <div class="project">
-            <span class="project-name">ThoughtBox</span>
-            <a href="https://github.com/gyancodes/thoughtbox">github.com/gyancodes/thoughtbox</a>
-          </div>
+    <div class="exp-item">
+      <img src="https://media.licdn.com/dms/image/v2/C4D0BAQFnIPmOGT7TXg/company-logo_100_100/company-logo_100_100/0/1673438236390/thinkscript_orgnization_logo?e=1780531200&v=beta&t=zw0fEuQYaDJhaL-40mbtWQUEEmZ7YGXUwEX0QXr28ZQ" class="company-logo" alt="ThinkScript Logo">
+      <div class="exp-content">
+        <div class="exp-header">
+          <span class="company-name">ThinkScript</span>
+          <span class="exp-duration">Jan 2023 &ndash; Present</span>
         </div>
-      </section>
+        <div class="role">
+          <div class="role-title">Founder</div>
+          <div class="role-desc">University tech community with 200+ members; organized workshops and collaborative coding events.</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <section aria-labelledby="skills-heading">
-        <h2 id="skills-heading">Skills</h2>
-        <div class="tags">
-          <span class="tag">TypeScript</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">Express.js</span>
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">Prisma</span>
-          <span class="tag">Spring Boot</span>
-          <span class="tag">Java</span>
-          <span class="tag">MongoDB</span>
-          <span class="tag">REST APIs</span>
-          <span class="tag">Docker</span>
-          <span class="tag">AWS</span>
-          <span class="tag">Git</span>
-          <span class="tag">CI/CD</span>
-          <span class="tag">Postman</span>
-        </div>
-      </section>
-    </article>
-  </main>
+  <!-- <section>
+    <h2>Projects</h2>
+    <ul class="projects-list">
+      <li>
+        <span class="project-name">SilentX</span>
+        <a href="https://github.com/gyancodes/silentx">github.com/gyancodes/silentx</a>
+      </li>
+      <li>
+        <span class="project-name">ConvertFlow</span>
+        <a href="https://github.com/gyancodes/convertflow">github.com/gyancodes/convertflow</a>
+      </li>
+      <li>
+        <span class="project-name">Micro Feed</span>
+        <a href="https://github.com/gyancodes/micro-feed">github.com/gyancodes/micro-feed</a>
+      </li>
+      <li>
+        <span class="project-name">SyncBeats</span>
+        <a href="https://github.com/gyancodes/syncbeats">github.com/gyancodes/syncbeats</a>
+      </li>
+      <li>
+        <span class="project-name">ThoughtBox</span>
+        <a href="https://github.com/gyancodes/thoughtbox">github.com/gyancodes/thoughtbox</a>
+      </li>
+    </ul>
+  </section> -->
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <span>TypeScript / JavaScript</span>
+      <span>Node.js / Express</span>
+      <span>PostgreSQL / MongoDB</span>
+      <span>Spring Boot / Java</span>
+      <span>Prisma / REST APIs</span>
+      <span>Docker / AWS / Git</span>
+    </div>
+  </section>
 </body>
 </html>
