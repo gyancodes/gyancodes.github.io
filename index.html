@@ -4,251 +4,42 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gyan Prakash Tiwari</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  body {
-    max-width: 680px;
-    margin: 40px auto;
-    padding: 0 20px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #24292f;
-    background-color: #ffffff;
-  }
-
-  a {
-    color: #0969da;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  header {
-    margin-bottom: 32px;
-  }
-
-  h1 {
-    font-size: 24px;
-    font-weight: 600;
-    margin: 0 0 8px 0;
-  }
-
-  .links {
-    font-size: 13px;
-  }
-
-  .links a {
-    margin-right: 12px;
-  }
-
-  section {
-    margin-bottom: 32px;
-  }
-
-  h2 {
-    font-size: 16px;
-    font-weight: 600;
-    border-bottom: 1px solid #d0d7de;
-    padding-bottom: 4px;
-    margin-bottom: 16px;
-  }
-
-  .exp-item {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 40px;
-  }
-
-  .company-logo {
-    width: 44px;
-    height: 44px;
-    object-fit: contain;
-    border-radius: 8px;
-    border: 1px solid #eef0f2;
-    background: #f8f9fa;
-    flex-shrink: 0;
-  }
-
-  .exp-content {
-    flex: 1;
-  }
-
-  .exp-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 2px;
-  }
-
-  .company-name {
-    font-size: 15px;
-    font-weight: 600;
-  }
-
-  .exp-duration {
-    font-size: 13px;
-    color: #57606a;
-  }
-
-  .exp-location {
-    font-size: 12px;
-    color: #57606a;
-    margin-bottom: 12px;
-  }
-
-  .role {
-    margin-top: 8px;
-    padding-left: 12px;
-    border-left: 2px solid #f0f0f0;
-  }
-
-  .role-title {
-    display: flex;
-    justify-content: space-between;
-    font-weight: 500;
-    font-size: 13.5px;
-  }
-
-  .role-date {
-    font-weight: normal;
-    font-size: 12px;
-    color: #57606a;
-  }
-
-  .role-desc {
-    font-size: 13px;
-    margin-top: 4px;
-  }
-
-  .projects-list {
-    list-style: none;
-    padding: 0;
-  }
-
-  .projects-list li {
-    margin-bottom: 6px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .project-name {
-    font-weight: 500;
-  }
-
-  .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 16px;
-    font-size: 13px;
-  }
-
-  @media (max-width: 600px) {
-    body { margin-top: 20px; }
-    .exp-header, .role-title, .projects-list li {
-      flex-direction: column;
-    }
-    .role-date { margin-top: 2px; }
-  }
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f4f5f7;color:#0f172a;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+.container{width:min(100%,640px);margin:0 auto;padding:58px 48px 50px}
+.nav{display:flex;align-items:center;gap:22px;margin-bottom:48px}
+.nav a{font-size:14px;color:#0f172a;text-decoration:none;transition:color .2s}
+.nav a:hover{color:#2563eb}
+h1{font-size:28px;font-weight:500;letter-spacing:0;margin-bottom:20px;color:#020617}
+p{max-width:580px;margin-bottom:16px;color:#0f172a;font-size:14px}
+.socials{display:flex;gap:18px;margin-top:46px}
+.socials a{color:#94a3b8;transition:color .2s}
+.socials a:hover{color:#64748b}
+.socials svg{display:block;width:15px;height:15px;fill:currentColor}
+@media(max-width:600px){.container{padding:34px 24px 42px}.nav{gap:16px;flex-wrap:wrap;margin-bottom:42px}h1{font-size:25px}}
 </style>
 </head>
 <body>
-  <header>
-    <h1>Gyan Prakash Tiwari</h1>
-    <div class="links">
-      <a href="https://github.com/gyancodes">GitHub</a>
-      <a href="https://linkedin.com/in/gyancodes">LinkedIn</a>
-      <!-- <a href="mailto:gyanprakash.tiwari@outlook.com">Email</a> -->
-    </div>
-  </header>
+<div class="container">
+  <nav class="nav">
+    <a href="index.html">about</a>
+    <a href="projects.html">projects</a>
+    <a href="work.html">work</a>
+  </nav>
 
-  <section id="about">
-    <p>
-    Engineer and product builder. For the past two years, I've focused on independent product development, building full-stack applications from zero to scale. I am particularly interested in and currently working on backend systems, infrastructure, AI, and security.
-    </p>
-  </section>
+  <h1>hey, i'm gyan</h1>
+  <p>backend engineer building production systems with node.js, typescript, and postgresql. i design and ship full-stack applications end-to-end; from zero to deployed.</p>
+  <p>i previously co-founded a fintech platform and built an LLM-powered analysis app for pitch decks. i enjoy working on backend architecture, infrastructure, and scalable systems.</p>
+  <p>looking for a backend / full-stack role where i can ship real products.</p>
 
-  <section>
-    <h2>Work</h2>
-    
-    <div class="exp-item">
-      <img src="https://res.cloudinary.com/da7rmnbiy/image/upload/v1778912058/ds_tp2lkc.png" class="company-logo" alt="Dhansamuh Logo">
-      <div class="exp-content">
-        <div class="exp-header">
-          <span class="company-name">Dhansamuh</span>
-          <span class="exp-duration">1 yr 5 mos</span>
-        </div>
-        <div class="exp-location">Hyderabad, India · Hybrid</div>
-        
-        <div class="role">
-          <div class="role-title">
-            <span>Co-Founder (Full-time)</span>
-            <span class="role-date">Apr 2024 &ndash; Mar 2025</span>
-          </div>
-          <div class="role-desc">Building a secure digital platform modernizing traditional committee systems with bank-level security and KYC verification.</div>
-        </div>
-        
-        <div class="role">
-          <div class="role-title">
-            <span>Founding Engineer (Part-time)</span>
-            <span class="role-date">Nov 2023 &ndash; Apr 2024</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="exp-item">
-      <img src="https://media.licdn.com/dms/image/v2/C4D0BAQFnIPmOGT7TXg/company-logo_100_100/company-logo_100_100/0/1673438236390/thinkscript_orgnization_logo?e=1780531200&v=beta&t=zw0fEuQYaDJhaL-40mbtWQUEEmZ7YGXUwEX0QXr28ZQ" class="company-logo" alt="ThinkScript Logo">
-      <div class="exp-content">
-        <div class="exp-header">
-          <span class="company-name">ThinkScript</span>
-          <span class="exp-duration">Jan 2023 &ndash; Present</span>
-        </div>
-        <div class="role">
-          <div class="role-title">Founder</div>
-          <div class="role-desc">University tech community with 200+ members; organized workshops and collaborative coding events.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- <section>
-    <h2>Projects</h2>
-    <ul class="projects-list">
-      <li>
-        <span class="project-name">SilentX</span>
-        <a href="https://github.com/gyancodes/silentx">github.com/gyancodes/silentx</a>
-      </li>
-      <li>
-        <span class="project-name">ConvertFlow</span>
-        <a href="https://github.com/gyancodes/convertflow">github.com/gyancodes/convertflow</a>
-      </li>
-      <li>
-        <span class="project-name">Micro Feed</span>
-        <a href="https://github.com/gyancodes/micro-feed">github.com/gyancodes/micro-feed</a>
-      </li>
-      <li>
-        <span class="project-name">SyncBeats</span>
-        <a href="https://github.com/gyancodes/syncbeats">github.com/gyancodes/syncbeats</a>
-      </li>
-      <li>
-        <span class="project-name">ThoughtBox</span>
-        <a href="https://github.com/gyancodes/thoughtbox">github.com/gyancodes/thoughtbox</a>
-      </li>
-    </ul>
-  </section> -->
-
-  <section>
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <span>TypeScript / JavaScript</span>
-      <span>Node.js / Express</span>
-      <span>PostgreSQL / MongoDB</span>
-      <span>Spring Boot / Java</span>
-      <span>Prisma / REST APIs</span>
-      <span>Docker / AWS / Git</span>
-    </div>
-  </section>
+  <div class="socials">
+    <a href="https://github.com/gyancodes" title="GitHub"><svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+    <a href="https://linkedin.com/in/gyancodes" title="LinkedIn"><svg viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg></a>
+    <a href="mailto:gyanprakash.tiwari@outlook.com" title="Email"><svg viewBox="0 0 16 16"><path d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 00.357.642l7.25 4.625a.75.75 0 00.786 0l7.25-4.625a.75.75 0 00.357-.642V3.75A1.75 1.75 0 0014.25 2H1.75zM0 6.695v6.055c0 .966.784 1.75 1.75 1.75h12.5A1.75 1.75 0 0016 12.75V6.695l-6.832 4.343a2.25 2.25 0 01-2.336 0L0 6.695z"/></svg></a>
+  </div>
+</div>
 </body>
 </html>
