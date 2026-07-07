@@ -15,6 +15,15 @@ body{background:#f4f5f7;color:#0f172a;font-family:Inter,-apple-system,BlinkMacSy
 .nav a:hover{color:#2563eb}
 h1{font-size:28px;font-weight:500;letter-spacing:0;margin-bottom:20px;color:#020617}
 p{max-width:580px;margin-bottom:16px;color:#0f172a;font-size:14px}
+.contributions{margin-top:30px}
+.contributions-label{font-size:12px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;color:#64748b;margin-bottom:10px}
+.contribution-list{display:flex;flex-direction:column;gap:15px;border-left:2px solid #22c55e;padding-left:14px}
+.contribution-title{font-size:14px;font-weight:500;line-height:1.45;margin-bottom:4px;color:#020617}
+.contribution-title a{color:#2563eb;text-decoration:none}
+.contribution-title a:hover{text-decoration:underline;text-underline-offset:3px}
+.contribution-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:12px;color:#64748b}
+.status{display:inline-flex;align-items:center;gap:5px;color:#15803d;font-weight:500}
+.status::before{content:"";width:7px;height:7px;border-radius:999px;background:#22c55e}
 .socials{display:flex;gap:18px;margin-top:46px}
 .socials a{color:#94a3b8;transition:color .2s}
 .socials a:hover{color:#64748b}
@@ -32,7 +41,39 @@ p{max-width:580px;margin-bottom:16px;color:#0f172a;font-size:14px}
 
   <h1>hey, i'm gyan</h1>
   <p>24 CS grad. I spent the last two years trying to build a fintech startup with friends. It didn't succeed, but it taught me a lot about building software and working on real products. I'm now investing in becoming a stronger engineer and looking for an opportunity where I can learn fast, contribute, and grow.</p>
-  
+
+  <section class="contributions" aria-labelledby="contributions-title">
+    <div class="contributions-label" id="contributions-title">recent open source contributions</div>
+    <div class="contribution-list" id="contribution-list">
+      <div class="contribution-item">
+        <div class="contribution-title">
+          <a href="https://github.com/Tracer-Cloud/opensre/pull/3759" target="_blank" rel="noopener noreferrer">Issue #3739 fix: show auth login hint for credit-exhausted investigations</a>
+        </div>
+        <div class="contribution-meta">
+          <span>Tracer-Cloud/opensre</span>
+          <span class="status">merged PR</span>
+        </div>
+      </div>
+      <div class="contribution-item">
+        <div class="contribution-title">
+          <a href="https://github.com/Tracer-Cloud/opensre/pull/3738" target="_blank" rel="noopener noreferrer">docs: sweep renamed symbols per #3734</a>
+        </div>
+        <div class="contribution-meta">
+          <span>Tracer-Cloud/opensre</span>
+          <span class="status">merged PR</span>
+        </div>
+      </div>
+      <div class="contribution-item">
+        <div class="contribution-title">
+          <a href="https://github.com/calcom/cal.diy/pull/27558" target="_blank" rel="noopener noreferrer">fix(cal-video): make toggle switch visible in mic settings</a>
+        </div>
+        <div class="contribution-meta">
+          <span>calcom/cal.diy</span>
+          <span class="status">merged PR</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div class="socials">
     <a href="https://github.com/gyancodes" title="GitHub"><svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
@@ -40,5 +81,67 @@ p{max-width:580px;margin-bottom:16px;color:#0f172a;font-size:14px}
     <a href="mailto:gyanprakash.tiwari@outlook.com" title="Email"><svg viewBox="0 0 16 16"><path d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 00.357.642l7.25 4.625a.75.75 0 00.786 0l7.25-4.625a.75.75 0 00.357-.642V3.75A1.75 1.75 0 0014.25 2H1.75zM0 6.695v6.055c0 .966.784 1.75 1.75 1.75h12.5A1.75 1.75 0 0016 12.75V6.695l-6.832 4.343a2.25 2.25 0 01-2.336 0L0 6.695z"/></svg></a>
   </div>
 </div>
+<script>
+const contributionList = document.getElementById("contribution-list");
+const fallbackContributions = contributionList ? contributionList.innerHTML : "";
+
+function createContributionItem(pr) {
+  const item = document.createElement("div");
+  item.className = "contribution-item";
+
+  const title = document.createElement("div");
+  title.className = "contribution-title";
+
+  const link = document.createElement("a");
+  link.href = pr.html_url;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.textContent = pr.title;
+  title.appendChild(link);
+
+  const meta = document.createElement("div");
+  meta.className = "contribution-meta";
+
+  const repo = document.createElement("span");
+  repo.textContent = pr.repository_url.replace("https://api.github.com/repos/", "");
+
+  const status = document.createElement("span");
+  status.className = "status";
+  status.textContent = "merged PR";
+
+  meta.append(repo, status);
+  item.append(title, meta);
+  return item;
+}
+
+async function loadRecentContributions() {
+  if (!contributionList) return;
+
+  try {
+    const query = encodeURIComponent("author:gyancodes is:pr is:merged");
+    const response = await fetch(`https://api.github.com/search/issues?q=${query}&sort=updated&order=desc&per_page=20`, {
+      headers: { Accept: "application/vnd.github+json" }
+    });
+
+    if (!response.ok) throw new Error("GitHub API request failed");
+
+    const data = await response.json();
+    const contributions = data.items
+      .filter((pr) => {
+        const repo = pr.repository_url.replace("https://api.github.com/repos/", "");
+        return !repo.toLowerCase().startsWith("gyancodes/");
+      })
+      .slice(0, 3);
+
+    if (!contributions.length) return;
+
+    contributionList.replaceChildren(...contributions.map(createContributionItem));
+  } catch (error) {
+    contributionList.innerHTML = fallbackContributions;
+  }
+}
+
+loadRecentContributions();
+</script>
 </body>
 </html>
