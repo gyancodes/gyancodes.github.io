@@ -8,34 +8,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#f4f5f7;color:#0f172a;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
+body{background:#100f0f;color:#d8d4cf;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:15px;line-height:1.6;min-height:100vh;color-scheme:dark}
 .container{width:min(100%,640px);margin:0 auto;padding:58px 48px 50px}
 .nav{display:flex;align-items:center;gap:22px;margin-bottom:48px}
-.nav a{font-size:14px;color:#0f172a;text-decoration:none;transition:color .2s}
-.nav a:hover{color:#2563eb}
-h1{font-size:28px;font-weight:500;letter-spacing:0;margin-bottom:24px;color:#020617}
+.nav a{font-size:14px;color:#cbc6bf;text-decoration:none;transition:color .2s}
+.nav a:hover{color:#f0ebe4}
+h1{font-size:28px;font-weight:500;letter-spacing:0;margin-bottom:24px;color:#f4efe8}
 .section{margin-top:48px}
 .section:first-of-type{margin-top:0}
-.section-title{font-size:24px;font-weight:500;letter-spacing:0;color:#020617;margin-bottom:28px}
+
 .project{margin-bottom:28px}
 .project:last-child{margin-bottom:0}
 .project-name{font-size:16px;font-weight:500;line-height:1.25;margin-bottom:6px}
-.project-name a{color:#2563eb;text-decoration:none}
+.project-name a{color:#8fb7ff;text-decoration:none}
 .project-name a::before{content:"\2197 ";font-size:12px}
 .project-name a:hover{text-decoration:underline;text-underline-offset:3px}
-.project-desc{max-width:580px;font-size:13px;color:#0f172a;margin-bottom:9px}
+.project-desc{max-width:580px;font-size:13px;color:#d8d4cf;margin-bottom:9px}
 .project-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
-.project-tags span{display:inline-flex;align-items:center;min-height:21px;font-size:11px;font-weight:500;color:#334155;background:#e9edf3;border:1px solid #dfe4ec;padding:1px 8px;border-radius:2px}
+.project-tags span{display:inline-flex;align-items:center;min-height:21px;font-size:11px;font-weight:500;color:#cfc8bf;background:#1c1a1a;border:1px solid #2b2827;padding:1px 8px;border-radius:2px}
 .project-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:2px}
-.project-links a,.github-more{font-size:12px;color:#2563eb;text-decoration:none}
+.project-links a,.github-more{font-size:12px;color:#8fb7ff;text-decoration:none}
 .project-links a::before,.github-more::before{content:"\2197 ";font-size:10px}
 .project-links a:hover,.github-more:hover{text-decoration:underline;text-underline-offset:3px}
 .github-row{display:flex;justify-content:center;margin:36px 0 52px}
 .socials{display:flex;gap:18px}
-.socials a{color:#94a3b8;transition:color .2s}
-.socials a:hover{color:#64748b}
+.socials a{color:#8d8780;transition:color .2s}
+.socials a:hover{color:#d8d4cf}
 .socials svg{display:block;width:15px;height:15px;fill:currentColor}
-@media(max-width:600px){.container{padding:34px 24px 42px}.nav{gap:16px;flex-wrap:wrap;margin-bottom:42px}h1{font-size:25px}.section-title{font-size:22px}.project{margin-bottom:26px}}
+@media(max-width:600px){.container{padding:34px 24px 42px}.nav{gap:16px;flex-wrap:wrap;margin-bottom:42px}h1{font-size:25px}.project{margin-bottom:26px}}
 </style>
 </head>
 <body>
@@ -50,20 +50,6 @@ h1{font-size:28px;font-weight:500;letter-spacing:0;margin-bottom:24px;color:#020
     <h1>projects</h1>
 
     <div class="project">
-      <div class="project-name"><a href="https://github.com/gyancodes/silentx">SilentX</a></div>
-      <div class="project-desc">Privacy-first messaging app with end-to-end encryption using NaCl. Anonymous identities, no personal data collection.</div>
-      <div class="project-tags">
-        <span>React Native</span>
-        <span>Expo</span>
-        <span>NaCl</span>
-        <span>Encryption</span>
-      </div>
-      <div class="project-links">
-        <a href="https://github.com/gyancodes/silentx">Source</a>
-      </div>
-    </div>
-
-    <div class="project">
       <div class="project-name"><a href="https://github.com/gyancodes/convertflow">ConvertFlow</a></div>
       <div class="project-desc">Client-side file conversion tool with multiple format support. All processing happens locally in the browser for privacy.</div>
       <div class="project-tags">
@@ -76,24 +62,6 @@ h1{font-size:28px;font-weight:500;letter-spacing:0;margin-bottom:24px;color:#020
         <a href="https://github.com/gyancodes/convertflow">Source</a>
       </div>
     </div>
-
-    <div class="project">
-      <div class="project-name"><a href="https://github.com/gyancodes/micro-feed">Micro Feed</a></div>
-      <div class="project-desc">Lightweight social feed with real-time updates via websocket. User authentication and profile management.</div>
-      <div class="project-tags">
-        <span>Next.js</span>
-        <span>WebSocket</span>
-        <span>PostgreSQL</span>
-        <span>Supabase</span>
-      </div>
-      <div class="project-links">
-        <a href="https://github.com/gyancodes/micro-feed">Source</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2 class="section-title">past projects</h2>
 
     <div class="project">
       <div class="project-name"><a href="https://github.com/gyancodes/syncbeats">SyncBeats</a></div>
